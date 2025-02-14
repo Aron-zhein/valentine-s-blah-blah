@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Great Vibes', cursive;
+    background-color: #fef1f1;
+    background-image: url(https://img.freepik.com/free-vector/hand-drawn-background-valentines-day-celebration_23-2151174484.jpg?ga=GA1.1.846825630.1739503197&semt=ais_hybrid);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.envelope {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: #f8c6d9;
+    border-radius: 10px;
+    overflow: hidden;
+    transform-origin: top;
+    transition: transform 1s ease-in-out;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #e89cb0;
+    border-bottom: 2px solid #f7b7c5;
+    transition: transform 1s ease-in-out;
+}
+
+.envelope-body {
+    position: relative;
+    padding: 20px;
+    display: none; 
+    z-index: 2;
+    text-align: center;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .envelope-body {
+    display: block;
+}
+
+.heart {
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #d16d81;
+    margin-bottom: 20px;
+}
+
+.content {
+    font-size: 18px;
+    color: #333;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+@keyframes envelopeOpen {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(180deg);
+    }
+}
